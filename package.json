@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "pages:build": "opennextjs-cloudflare build",
+    "pages:build": "opennextjs-cloudflare build && node scripts/copy-cache-to-assets.mjs",
     "preview": "opennextjs-cloudflare preview",
     "start": "next start",
     "lint": "eslint"
