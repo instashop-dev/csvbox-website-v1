@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "csvbox-redesign",
+  "compatibility_date": "2025-12-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+    // Worker runs first for all routes so Next.js routing is respected.
+    // Static assets (_next/static, images, etc.) are served via env.ASSETS.fetch()
+    // inside the worker itself. Cache files under cdn-cgi/ are always worker-first.
+    "run_worker_first": true
+  }
+}
