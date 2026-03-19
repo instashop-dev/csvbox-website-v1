@@ -36,4 +36,11 @@ for (const buildId of buildIds) {
   console.log(`Copied cache for buildId=${buildId} → ${dest}`);
 }
 
+const workerSrc = join(process.cwd(), ".open-next", "worker.js");
+const workerDest = join(process.cwd(), ".open-next", "_worker.js");
+if (existsSync(workerSrc)) {
+  cpSync(workerSrc, workerDest);
+  console.log("Copied worker.js → _worker.js");
+}
+
 console.log("✓ Cache files copied to assets.");
