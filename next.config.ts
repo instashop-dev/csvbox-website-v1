@@ -1,12 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: false,
+  // "standalone" is required by OpenNext / Cloudflare Pages adapter
+  output: "standalone",
   images: {
+    // External images served from Umso CDN
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "umsousercontent.com",
+      },
+    ],
+    // Keep unoptimized so no on-demand image server is needed
     unoptimized: true,
   },
-  compress: true,
 };
 
 export default nextConfig;
