@@ -19,6 +19,9 @@ const logos = [
   { src: "https://umsousercontent.com/lib_XeXLBCemoPqjIOuk/vo5hgcr4kkhomdng.svg", alt: "Memberstack" },
   { src: "https://umsousercontent.com/lib_XeXLBCemoPqjIOuk/7cu2b7ctryfwoph1.png", alt: "Senja" },
   { src: "https://umsousercontent.com/lib_XeXLBCemoPqjIOuk/zs8il3heivhf6s2g.svg", alt: "WizCommerce" },
+  { src: "https://umsousercontent.com/lib_XeXLBCemoPqjIOuk/amx02698izej4dvz.jpg", alt: "BT" },
+  { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/idLnCwgkTVQViGQx.png", alt: "Lingble" },
+  { src: "https://umsousercontent.com/lib_XeXLBCemoPqjIOuk/xte6pwa1880gkr1k.png", alt: "Automify" },
 ];
 
 const features = [
