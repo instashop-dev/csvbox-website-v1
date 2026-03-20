@@ -56,6 +56,14 @@ export default function OneSchemaPage() {
         { title: "Enterprise-grade security", desc: "SOC 2 Type II, GDPR, data residency options for all plans" },
         { title: "Integrate in minutes", desc: "No meetings. No waiting. Just ship." },
       ]}
+      whyCsvBox={[
+        { title: "Developer-First Design", desc: "Clean APIs, React/JS SDKs, sandbox testing, and event hooks. Built to drop into modern stacks without glue code." },
+        { title: "Full Import Stack in One Tool", desc: "Upload, map, validate, transform, deliver, monitor. No need to stitch together libraries, UI, and custom validation logic." },
+        { title: "Production-Proven Scale", desc: "Handles millions of rows, resumable uploads, parallel validation, and enterprise-grade security out of the box." },
+        { title: "Enterprise Security Without the Overhead", desc: "SOC 2 Type II, GDPR, encryption, private mode, data residency — included from day one, even on startup plans." },
+        { title: "Saves Engineering Months", desc: "4–6 months of dev time avoided, plus ongoing support & maintenance overhead. Teams using CSVBox report 5-10× faster onboarding and drastically fewer support tickets." },
+        { title: "Startup-Friendly Pricing", desc: "Full-fledged importer at a fraction of the 'enterprise-only' competition. Flexible plans that grow with you." },
+      ]}
       summary="CSVbox offers fast developer setup with enterprise features at startup pricing - the sweet spot between complexity and capability. Why pay 20× more when you can get the same functionality, faster setup, and better UX — all for $19/month?"
     />
   );

@@ -6,6 +6,7 @@ import CtaBanner from "@/components/CtaBanner";
 
 interface TableRow { col1: string; col2: string; col3: string; }
 interface BenefitCard { title: string; desc: string; }
+interface WhyCsvBoxCard { title: string; desc: string; }
 
 interface ComparisonLayoutProps {
   competitor: string;
@@ -16,6 +17,7 @@ interface ComparisonLayoutProps {
   bizTable: { rows: [string, string, string][]; };
   benefits: BenefitCard[];
   summary: string;
+  whyCsvBox?: WhyCsvBoxCard[];
 }
 
 function CheckIcon({ val }: { val: string }) {
@@ -25,7 +27,18 @@ function CheckIcon({ val }: { val: string }) {
   return <span>{val}</span>;
 }
 
-export default function ComparisonLayout({ competitor, heroH1, heroSubtitle, qualTable, techTable, bizTable, benefits, summary }: ComparisonLayoutProps) {
+const defaultWhyCsvBox: WhyCsvBoxCard[] = [
+  { title: "Developer-First Design", desc: "Clean APIs, React/JS SDKs, sandbox testing, and event hooks. Built to drop into modern stacks without glue code." },
+  { title: "Full Import Stack in One Tool", desc: "Upload, map, validate, transform, deliver, monitor. No need to stitch together libraries, UI, and custom validation logic." },
+  { title: "Production-Proven Scale", desc: "Handles millions of rows, resumable uploads, parallel validation, and enterprise-grade security out of the box." },
+  { title: "Enterprise Security Without the Overhead", desc: "SOC 2 Type II, GDPR, encryption, private mode, data residency — included from day one, even on startup plans." },
+  { title: "Saves Engineering Months", desc: "4–6 months of dev time avoided, plus ongoing support & maintenance overhead. Teams using CSVBox report 5-10× faster onboarding and drastically fewer support tickets." },
+  { title: "Startup-Friendly Pricing", desc: "Full-fledged importer at a fraction of the 'enterprise-only' competition. Flexible plans that grow with you." },
+];
+
+export default function ComparisonLayout({ competitor, heroH1, heroSubtitle, qualTable, techTable, bizTable, benefits, summary, whyCsvBox = [] }: ComparisonLayoutProps) {
+  const displayWhyCsvBox = whyCsvBox.length > 0 ? whyCsvBox : defaultWhyCsvBox;
+
   return (
     <>
       <Navbar />
@@ -145,6 +158,24 @@ export default function ComparisonLayout({ competitor, heroH1, heroSubtitle, qua
               ))}
             </div>
             <p className="mt-8 text-center text-gray-700 font-medium text-sm">{summary}</p>
+          </div>
+        </section>
+
+        {/* Why CSVBox? */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3">Why CSVBox?</h2>
+              <p className="text-gray-600 text-base max-w-2xl mx-auto">For SaaS teams that need clean imports, fast.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {displayWhyCsvBox.map((card) => (
+                <div key={card.title} className="p-6 border border-gray-200 rounded-xl bg-white">
+                  <h3 className="font-semibold text-gray-900 mb-2 text-base">{card.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

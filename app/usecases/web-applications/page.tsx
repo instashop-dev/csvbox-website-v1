@@ -29,6 +29,7 @@ export default function WebAppsPage() {
         { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/jUXonWxVtVyIbpfH.png", alt: "Nextlot" },
         { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/tzFlWdkoOyQXCWZj.svg", alt: "PropertyRadar" },
         { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/wTjCQiofZymZDqTi.svg", alt: "Pando" },
+        { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/rnlrmtr1af277it0.svg", alt: "Logo" },
         { src: "https://umsousercontent.com/lib_khTFGMonhWqcPLFG/oap1ogeqnwok62l1.webp", alt: "Dreamdata" },
       ]}
       useCaseCards={[

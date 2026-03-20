@@ -65,6 +65,14 @@ export default function FlatfilePage() {
         { title: "Lightweight & efficient", desc: "Non-clunky UI with instant feedback." },
         { title: "Customer driven development", desc: "Your feedback shapes our roadmap" },
       ]}
+      whyCsvBox={[
+        { title: "Developer-First Design", desc: "Clean APIs, React/JS SDKs, sandbox testing, and event hooks. Built to drop into modern stacks without glue code." },
+        { title: "Full Import Stack in One Tool", desc: "Upload, map, validate, transform, deliver, monitor. No need to stitch together libraries, UI, and custom validation logic." },
+        { title: "Production-Proven Scale", desc: "Handles millions of rows, resumable uploads, parallel validation, and enterprise-grade security out of the box." },
+        { title: "Enterprise Security Without the Overhead", desc: "SOC 2 Type II, GDPR, encryption, private mode, data residency — included from day one, even on startup plans." },
+        { title: "Saves Engineering Months", desc: "4–6 months of dev time avoided, plus ongoing support & maintenance overhead. Teams using CSVBox report 5-10× faster onboarding and drastically fewer support tickets." },
+        { title: "Startup-Friendly Pricing", desc: "Full-fledged importer at a fraction of the 'enterprise-only' competition. Flexible plans that grow with you." },
+      ]}
       summary="Cut setup time by 90%, costs by 20×, and complexity by 100%. CSVBox is everything Flatfile promised — simplified."
     />
   );
